@@ -3,6 +3,7 @@ Write a function that reverses a string. The input string is given as an array o
 
 You must do this by modifying the input array in-place with O(1) extra memory.'''
 
+# solution 1
 class Solution(object):
     def reverseString(self, s):      
         left, right = 0, len(s) - 1
@@ -10,7 +11,7 @@ class Solution(object):
             s[left], s[right] = s[right], s[left]
             left, right = left + 1, right - 1
 
+# solution 2
 class Solution(object):
     def reverseString(self, s): 
         s[:] = s[::-1]
-        
