@@ -1,0 +1,27 @@
+pseudocode for a general:
+function fn(arr):
+    left = 0 
+    for (int right = 0; right < arr.leghth; right++):
+        do some logics to add element at arr[right] to window
+
+        while WINDOW_IS_INVALID:
+            do some logic to remove element at arr[left] from window
+            left++
+
+        do some logic to update the answer
+
+
+pseudocode for find the longest subarray with sum less than or equal to k
+function fn(nums, k):
+    left = 0
+    curr = 0
+    ans = 0
+    for (int right=0; right <nums.legth; right++):
+        curr+= nums[right]
+        while (curr > k):
+            curr -= nums[left]
+            left ++
+
+        ans = max(ans, right - left +1)
+    
+    return ans
